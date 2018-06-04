@@ -19,7 +19,7 @@ class HalloWorld(Gtk.Window):
         
     
     def buttonPressed(self,button):
-        self.label2.set_text("updated")
+        self.label2.set_text("updatedtest")
     
         
 if __name__ == "__main__":
