@@ -19,7 +19,7 @@ class HalloWorld(Gtk.Window):
         
     
     def buttonPressed(self,button):
-        self.label2.set_text("updatedtest")
+        self.label2.set_text("aggiungo dati.json")
     
         
 if __name__ == "__main__":
