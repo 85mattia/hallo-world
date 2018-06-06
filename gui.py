@@ -21,7 +21,7 @@ class HalloWorld(Gtk.Window):
     
     def buttonPressed(self,button):
         output = subprocess.check_output(["ls"])
-        print("output")
+        print(output)
     
         
 if __name__ == "__main__":
