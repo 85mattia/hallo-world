@@ -1,4 +1,4 @@
 #!/bin/bash
-sleep 1
+sleep 
 cd hallo-world
-git pull https://github.com/85mattia/hallo-world.git
+git pull https://github.com/85mattia/hello-world.git
