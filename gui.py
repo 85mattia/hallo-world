@@ -21,7 +21,7 @@ class HalloWorld(Gtk.Window):
         
     
     def buttonPressed(self,button):
-        output = subprocess.check_output(["ls"])
+        output = subprocess.check_output(["sudo", "sh", "update.sh"])
         print(output)
     
         
