@@ -16,6 +16,7 @@ class HalloWorld(Gtk.Window):
         self.label2 = self.builder.get_object("label2")
         self.window = self.builder.get_object("window")
         self.window.set_position(Gtk.WindowPosition.CENTER) 
+        self.window.connect("destroy", Gtk.main_quit)
         self.window.show_all()
         
     
