@@ -18,11 +18,13 @@ class HalloWorld(Gtk.Window):
         self.window.set_position(Gtk.WindowPosition.CENTER) 
         self.window.connect("destroy", Gtk.main_quit)
         self.window.show_all()
+        self.label2.set_text("fatto")
         
     
     def buttonPressed(self,button):
         output = subprocess.check_output(["sudo", "sh", "update.sh"])
         print(output)
+        
     
         
 if __name__ == "__main__":
