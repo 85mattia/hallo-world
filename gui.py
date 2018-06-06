@@ -5,6 +5,7 @@ import RPi.GPIO as Gpio
 import serial
 import time
 import threading
+import subprocess
 
 class HalloWorld(Gtk.Window):
     def __init__(self):
@@ -19,7 +20,8 @@ class HalloWorld(Gtk.Window):
         
     
     def buttonPressed(self,button):
-        self.label2.set_text("aggiungo dati.json")
+        output = subprocess.check_output(["ls"])
+        print("output")
     
         
 if __name__ == "__main__":
