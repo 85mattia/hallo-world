@@ -2,4 +2,4 @@
 sleep 1
 sudo git reset --hard
 sudo git pull https://github.com/85mattia/hello-world.git
-sudo chmod -R 777 ../hello
+sudo chmod -R 777 ~
