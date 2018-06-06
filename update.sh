@@ -1,4 +1,3 @@
 #!/bin/bash
-sleep 
-cd hallo-world
+sleep 1
 git pull https://github.com/85mattia/hello-world.git
