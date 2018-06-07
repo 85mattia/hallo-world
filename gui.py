@@ -20,13 +20,13 @@ class HalloWorld(Gtk.Window):
         self.window.connect("destroy", Gtk.main_quit)
         self.window.show_all()
         self.label2.set_text("updatato")
-        self.currentFolder = os.getcwd() + "/"
+        self.currentFolder = os.getcwd()
         
     
     def buttonPressed(self,button):
         output = subprocess.check_output(["sudo", "sh", "update.sh"])
         print(output)
-        out = subprocess.check_output(["sudo", "chmod", "-R", self.currentFolder])
+        out = subprocess.check_output(["sudo", "chmod", "-R", "777", self.currentFolder])
         print(out)
         
         
