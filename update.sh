@@ -7,5 +7,4 @@ git reset --hard
 git pull https://github.com/85mattia/hello-world.git
 echo UPDATE SUCCESSFUL
 sleep 1
-sudo chmod -R 777 ~
 
