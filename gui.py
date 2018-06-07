@@ -27,8 +27,11 @@ class HalloWorld(Gtk.Window):
         
     
     def buttonPressed(self,button):
-        GObject.idle_add(self.startSpinner)
-        GObject.idle_add(self.updateProcess)
+        self.builder.get_object("spinner").active = True
+        self.builder.get_object("spinner").start()
+        th = threading.Thread(target=self.updateProcess)
+        th.deamon = true
+        th.start()
         
     def updateProcess(self):
         try:
@@ -42,11 +45,11 @@ class HalloWorld(Gtk.Window):
         print(output)
         out = subprocess.check_output(["sudo", "chmod", "-R", "777", self.currentFolder])
         print(out)
-        self.builder.get_object("spinner").stop()
+        GObject.idle_add(self.stopSpinner)
     
-    def startSpinner(self):
-        self.builder.get_object("spinner").active = True
-        self.builder.get_object("spinner").start()
+    def stopSpinner(self):
+        self.builder.get_object("spinner").active =False
+        self.builder.get_object("spinner").stop()
         
         
     
