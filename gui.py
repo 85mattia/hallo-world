@@ -6,6 +6,7 @@ import serial
 import time
 import threading
 import subprocess
+import os
 
 class HalloWorld(Gtk.Window):
     def __init__(self):
@@ -19,12 +20,13 @@ class HalloWorld(Gtk.Window):
         self.window.connect("destroy", Gtk.main_quit)
         self.window.show_all()
         self.label2.set_text("updatato")
+        self.currentFolder = getcwd()
         
     
     def buttonPressed(self,button):
         output = subprocess.check_output(["sudo", "sh", "update.sh"])
         print(output)
-        out = subprocess.check_output(["sudo", "chmod", "-R", "~"])
+        out = subprocess.check_output(["sudo", "chmod", "-R", self.currentFolder])
         print(out)
         
         
