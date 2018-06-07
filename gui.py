@@ -46,6 +46,7 @@ class HalloWorld(Gtk.Window):
     
     def startSpinner(self):
         self.builder.get_object("spinner").active = True
+        self.builder.get_object("spinner").start()
         
     def stopSpinner(self):
         self.builder.get_object("spinner").stop()
