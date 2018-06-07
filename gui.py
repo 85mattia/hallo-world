@@ -28,6 +28,9 @@ class HalloWorld(Gtk.Window):
     
     def buttonPressed(self,button):
         GObject.idle_add(self.startSpinner)
+        GObject.idle_add(self.updateProcess)
+        
+    def updateProcess(self):
         try:
             urllib.request.urlopen("https://www.google.com", timeout=1)
             print("ce rete")
@@ -39,7 +42,7 @@ class HalloWorld(Gtk.Window):
         print(output)
         out = subprocess.check_output(["sudo", "chmod", "-R", "777", self.currentFolder])
         print(out)
-        GObject.idle_add(self.stopSpinner)
+        self.builder.get_object("spinner").stop()
     
     def startSpinner(self):
         self.builder.get_object("spinner").set_visible(True)
