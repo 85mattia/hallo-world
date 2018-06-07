@@ -42,6 +42,7 @@ class HalloWorld(Gtk.Window):
         GObject.idle_add(self.stopSpinner)
     
     def startSpinner(self):
+        self.builder.get_object("spinner").set_visible(True)
         self.builder.get_object("spinner").start()
         
     def stopSpinner(self):
