@@ -18,7 +18,7 @@ class HalloWorld(Gtk.Window):
         self.window.set_position(Gtk.WindowPosition.CENTER) 
         self.window.connect("destroy", Gtk.main_quit)
         self.window.show_all()
-        self.label2.set_text("ora funzia dopo restart")
+        self.label2.set_text("updatato")
         
     
     def buttonPressed(self,button):
