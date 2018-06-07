@@ -30,7 +30,7 @@ class HalloWorld(Gtk.Window):
         self.builder.get_object("spinner").active = True
         self.builder.get_object("spinner").start()
         th = threading.Thread(target=self.updateProcess)
-        th.deamon = true
+        th.deamon = True
         th.start()
         
     def updateProcess(self):
@@ -48,7 +48,7 @@ class HalloWorld(Gtk.Window):
         GObject.idle_add(self.stopSpinner)
     
     def stopSpinner(self):
-        self.builder.get_object("spinner").active =False
+        self.builder.get_object("spinner").active = False
         self.builder.get_object("spinner").stop()
         
         
