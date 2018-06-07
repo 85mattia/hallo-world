@@ -6,7 +6,6 @@ import serial
 import time
 import threading
 import subprocess
-import sys
 
 class HalloWorld(Gtk.Window):
     def __init__(self):
@@ -25,7 +24,6 @@ class HalloWorld(Gtk.Window):
     def buttonPressed(self,button):
         output = subprocess.check_output(["sudo", "sh", "update.sh"])
         print(output)
-        sys.exit(0)
         
         
     
