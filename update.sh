@@ -1,5 +1,8 @@
 #!/bin/bash
 sleep 1
+mkdir -p ../backup-timeatt
+rm -rf ../backup-timeatt/*
+cp -r . ../backup-timeatt
 sudo git reset --hard
 sudo git pull https://github.com/85mattia/hello-world.git
 echo UPDATE SUCCESSFUL
