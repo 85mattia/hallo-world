@@ -20,7 +20,7 @@ class HalloWorld(Gtk.Window):
         self.window.connect("destroy", Gtk.main_quit)
         self.window.show_all()
         self.label2.set_text("updatato")
-        self.currentFolder = getcwd()
+        self.currentFolder = os.getcwd()
         
     
     def buttonPressed(self,button):
